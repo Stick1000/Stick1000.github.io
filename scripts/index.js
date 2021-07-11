@@ -104,7 +104,7 @@ function bindData() {
     education.forEach(function (e) {
         var card = bindToCard(
             CARD.HORIZONTAL,
-            e.img_path || placeholder_img.education,
+            e.img_path || PLACEHOLDER_IMAGE.EDUCATION,
             e.name,
             `${e.degree} \u2022 ${e.year_start} - ${e.year_end || "Present"}`
         );
@@ -120,7 +120,7 @@ function bindData() {
     technologies.forEach(function (e) {
         var card = bindToCard(
             CARD.HORIZONTAL,
-            e.img_path || placeholder_img.technologies,
+            e.img_path || PLACEHOLDER_IMAGE.TECHNOLOGIES,
             e.name,
             e.level
         );

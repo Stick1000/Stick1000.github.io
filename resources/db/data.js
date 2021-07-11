@@ -1,8 +1,8 @@
-const placeholder_img = {
-    education: "resources/img/icons/education.png",
-    skills: null,
-    technologies: "resources/img/icons/technologies.png",
-    projectsDone: null,
+const PLACEHOLDER_IMAGE = {
+    EDUCATION: "resources/img/icons/education.png",
+    SKILLS: null,
+    TECHNOLOGIES: "resources/img/icons/technologies.png",
+    PROJECTS_DONE: null,
 };
 
 const education = [
