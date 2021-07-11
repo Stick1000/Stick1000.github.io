@@ -70,7 +70,6 @@ body {
 
 .header-content a:hover {
     transition: all 0.4s ease;
-    /* border: 2px solid #ff5f5f; */
     color: #eeeeee;
     background-color: #ff5f5f;
 }
@@ -261,4 +260,15 @@ body {
     transition: all 0.4s ease;
     color: #eeeeee;
     background-color: #ff5f5f;
+}
+
+#about p {
+    font: 400 1em "Source Sans Pro", sans-serif;
+    color: #434244;
+    text-align: justify;
+}
+
+#about a {
+    color: #434244;
+    text-decoration-line: none;
 }
