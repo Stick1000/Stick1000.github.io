@@ -164,6 +164,7 @@ function bindData() {
 
 bindData();
 
+var details_btn = document.getElementById("details-btn");
 var about_btn = document.getElementById("about-btn");
 var return_btn = document.getElementById("return-btn");
 
@@ -177,6 +178,6 @@ about_btn.addEventListener("click", function (e) {
     });
 
     return_btn.hidden = false;
+    details_btn.remove();
     about_btn.remove();
 });
-
