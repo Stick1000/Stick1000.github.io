@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Janley Molina</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <!-- <nav>
+        <ol>
+            <li></li>
+        </ol>
+    </nav> -->
+    <body>
+        <header class="header">
+            <div class="header-img">
+                <img src="resources/img/profile.png" alt="profile_pic" />
+            </div>
+            <div class="header-content">
+                <h1>Janley Molina</h1>
+            </div>
+        </header>
+        <div id="templates">
+            <!-- MODAL TEMPLATE -->
+            <div class="modal template">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal-content"></div>
+                <div class="modal-footer"></div>
+            </div>
+
+            <!-- HORIZONTAL CARD TEMPLATE, cloned using JS -->
+            <div class="card card-h template">
+                <div class="card-h-img"></div>
+                <div class="card-h-content">
+                    <p class="card-h-title"></p>
+                    <p class="card-h-subtitle"></p>
+                    <p class="card-h-description"></p>
+                </div>
+            </div>
+
+            <!-- VERTICAL CARD TEMPLATE, cloned using JS -->
+            <div class="card card-v template">
+                <div class="card-v-img"></div>
+                <div class="card-v-content">
+                    <p class="card-v-title"></p>
+                    <p class="card-v-subtitle"></p>
+                    <p class="card-v-description"></p>
+                </div>
+            </div>
+            <!-- END OF CARD TEMPLATE -->
+
+            <!-- SMALL CARD TEMPLATE, cloned using JS -->
+            <div class="card card-sm template">
+                <div class="card-sm-img"></div>
+                <div class="card-sm-content">
+                    <p class="card-sm-title"></p>
+                </div>
+            </div>
+            <!-- END OF PILL TEMPLATE -->
+        </div>
+        <div class="sections">
+            <div class="section" id="education">
+                <h2 class="section-heading">Education</h2>
+                <div class="section-content col-2"></div>
+            </div>
+            <div class="section" id="skills">
+                <h2 class="section-heading">Skills</h2>
+                <div class="section-content col-4"></div>
+            </div>
+            <div class="section" id="technologies">
+                <h2 class="section-heading">Technologies</h2>
+                <div class="section-content col-3"></div>
+            </div>
+            <div class="section" id="projects-done">
+                <h2 class="section-heading">Projects</h2>
+                <div class="section-content col-2"></div>
+            </div>
+        </div>
+    </body>
+    <script src="resources/db/data.js"></script>
+    <script src="scripts/index.js"></script>
+</html>
