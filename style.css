@@ -1,3 +1,16 @@
+.noscript {
+    background-color: red;
+    color: white;
+    font: 600 1em "Montserrat", sans-serif;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nodata {
+    font: 600 1em "Montserrat", sans-serif;
+}
+
 body {
     background-color: #e6e6e6;
     color: #434244;
