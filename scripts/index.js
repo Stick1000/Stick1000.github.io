@@ -153,7 +153,7 @@ function bindData() {
                 `${e.date_started} - ${e.date_completed || "Present"}`,
                 e.description,
                 e.url,
-                "Project link \u02C3"
+                "Project link"
             );
             _projectsDone.append(card);
         });
@@ -163,3 +163,20 @@ function bindData() {
 }
 
 bindData();
+
+var about_btn = document.getElementById("about-btn");
+var return_btn = document.getElementById("return-btn");
+
+about_btn.addEventListener("click", function (e) {
+    document.querySelectorAll("body > div").forEach(function (e) {
+        if (e.id === "about") {
+            e.removeAttribute("hidden");
+        } else {
+            e.setAttribute("hidden", null);
+        }
+    });
+
+    return_btn.hidden = false;
+    about_btn.remove();
+});
+
