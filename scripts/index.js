@@ -101,44 +101,63 @@ function bindData() {
     );
 
     // Clone the template `div` and populate it with necessary data
-    education.forEach(function (e) {
-        var card = bindToCard(
-            CARD.HORIZONTAL,
-            e.img_path || PLACEHOLDER_IMAGE.EDUCATION,
-            e.name,
-            `${e.degree} \u2022 ${e.year_start} - ${e.year_end || "Present"}`
-        );
 
-        _education.append(card);
-    });
+    if (education.length) {
+        _education.querySelector(".nodata").remove();
 
-    skills.forEach(function (e) {
-        var card = bindToCard(CARD.SMALL, e.img_path, e.name);
-        _skills.append(card);
-    });
+        education.forEach(function (e) {
+            var card = bindToCard(
+                CARD.HORIZONTAL,
+                e.img_path || PLACEHOLDER_IMAGE.EDUCATION,
+                e.name,
+                `${e.degree} \u2022 ${e.year_start} - ${
+                    e.year_end || "Present"
+                }`
+            );
 
-    technologies.forEach(function (e) {
-        var card = bindToCard(
-            CARD.HORIZONTAL,
-            e.img_path || PLACEHOLDER_IMAGE.TECHNOLOGIES,
-            e.name,
-            e.level
-        );
-        _technologies.append(card);
-    });
+            _education.append(card);
+        });
+    }
 
-    projectsDone.forEach(function (e) {
-        var card = bindToCard(
-            CARD.VERTICAL,
-            e.img_path,
-            e.name,
-            `${e.date_started} - ${e.date_completed || "Present"}`,
-            e.description,
-            e.url,
-            "Project link \u02C3"
-        );
-        _projectsDone.append(card);
-    });
+    if (skills.length) {
+        _skills.querySelector(".nodata").remove();
+
+        skills.forEach(function (e) {
+            var card = bindToCard(CARD.SMALL, e.img_path, e.name);
+            _skills.append(card);
+        });
+    }
+
+    if (technologies.length) {
+        _technologies.querySelector(".nodata").remove();
+
+        technologies.forEach(function (e) {
+            var card = bindToCard(
+                CARD.HORIZONTAL,
+                e.img_path || PLACEHOLDER_IMAGE.TECHNOLOGIES,
+                e.name,
+                e.level
+            );
+            _technologies.append(card);
+        });
+    }
+
+    if (projectsDone.length) {
+        _projectsDone.querySelector(".nodata").remove();
+
+        projectsDone.forEach(function (e) {
+            var card = bindToCard(
+                CARD.VERTICAL,
+                e.img_path,
+                e.name,
+                `${e.date_started} - ${e.date_completed || "Present"}`,
+                e.description,
+                e.url,
+                "Project link \u02C3"
+            );
+            _projectsDone.append(card);
+        });
+    }
 
     document.querySelector("#templates").remove();
 }
