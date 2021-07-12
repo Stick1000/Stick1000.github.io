@@ -110,16 +110,33 @@ const projectsDone = [
         date_completed: "Jun 2021",
         description:
             "A postural awareness and fitness tracker app developed for the University of the East Ramon Magsaysay Memorial Medical Center (UERMMC) undergraduate thesis.",
-        img_path:
-            "https://image.freepik.com/free-photo/modern-office-space-interior_158595-5206.jpg",
+        img_path: "resources/img/projects/sitmate.gif",
         url: "https://github.com/NamelessOrganization/SitMate",
+    },
+    {
+        name: "Zest",
+        date_started: "Oct 2020",
+        date_completed: "Jun 2021",
+        description: "An innovative approach to organizing your day.",
+        img_path: "resources/img/projects/zest.png",
+        url: "https://github.com/jvc1019/Zest",
+    },
+    {
+        name: "Yesterday's Dream",
+        date_started: "2017",
+        date_completed: "2018",
+        description:
+            "A pretty fun role-playing game (RPG) made with RPG Maker MV.",
+        img_path: "resources/img/projects/yesterday_dream.png",
+        url: "https://1drv.ms/u/s!AvN4LNS2ng4d_CscSppj7tJl82W3?e=P07dGQ",
+        urlText: "Download",
     },
     {
         name: "Robotic Bottle-to-Ticket Exchanger (RoBoTE)",
         date_started: "Jun 2015",
         date_completed: "Feb 2016",
         description:
-            "An entry to the National Science and Technology Fair 2016 - Innovation Hub",
+            "An entry to the National Science and Technology Fair 2016 - Innovation Hub.\n• Champion, Robotics Category, Regional Scilympics 2015\n• Champion, Science Investigatory Project Category, Division Scilympics 2015",
         img_path: null,
         url: null,
     },
