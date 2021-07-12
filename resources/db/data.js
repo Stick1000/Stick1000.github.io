@@ -11,7 +11,7 @@ const education = [
         degree: "Elementary",
         year_start: 2003,
         year_end: 2012,
-        description: "XD",
+        description: "• Class Valedictorian",
         img_path: "resources/img/logos/acc.png",
     },
     {
@@ -19,7 +19,8 @@ const education = [
         degree: "Junior High School",
         year_start: 2012,
         year_end: 2016,
-        description: "XD",
+        description:
+            "• Part of Western Visayas delegate to the 2016 National Science and Technology Fair\n• Founded, along with four co-founders, the RSHS-VI Robotics Club, the first dedicated robotics club in Western Visayas",
         img_path: "resources/img/logos/rshs6.png",
     },
     {
@@ -27,7 +28,7 @@ const education = [
         degree: "Senior High School",
         year_start: 2016,
         year_end: 2018,
-        description: "XD",
+        description: "• With High Honors\n• Awards in Innovation",
         img_path: "resources/img/logos/rshs6.png",
     },
     {
@@ -35,7 +36,8 @@ const education = [
         degree: "B.S. in Computer Science",
         year_start: 2018,
         year_end: null,
-        description: "XD",
+        description:
+            "• University Scholar - 1st Semester SY 2020-2021\n• College Scholar - 2nd Semester SY 2018-2019",
         img_path:
             "https://upload.wikimedia.org/wikipedia/en/thumb/3/3d/University_of_The_Philippines_seal.svg/500px-University_of_The_Philippines_seal.svg.png",
     },
@@ -96,7 +98,8 @@ const projectsDone = [
         name: "Navarro Hotel Website",
         date_started: "July 2021",
         date_completed: "Present",
-        description: "test",
+        description:
+            "A company website for Navarro Hotel at Brgy. Caticlan, Malay, Aklan.",
         img_path:
             "https://cf.bstatic.com/xdata/images/hotel/max1024x768/247511297.jpg?k=49c31319e5a8e6c09eccecff743154ad4c0491b179ff920296a73f79ffc55391&o=&hp=1",
         url: null,
@@ -118,7 +121,6 @@ const projectsDone = [
         description:
             "An entry to the National Science and Technology Fair 2016 - Innovation Hub",
         img_path: null,
-        // "https://image.freepik.com/free-photo/used-plastic-bottles-recycling-bins-earth-day-campaign_53876-104848.jpg",
         url: null,
     },
 ];
