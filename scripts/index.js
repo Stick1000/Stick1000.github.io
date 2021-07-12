@@ -2,13 +2,13 @@
  * Predefined constants for different Card layouts
  */
 const CARD = {
-    HORIZONTAL: 0,
-    VERTICAL: 1,
-    SMALL: 2,
+    HORIZONTAL: "card-h",
+    VERTICAL: "card-v",
+    SMALL: "card-sm",
 };
 
 /**
- * @param {number} type - card layout as defined in the CARD constant (horizontal, vertical, or small)
+ * @param {string} layout - card layout as defined in the CARD constant (horizontal, vertical, or small)
  * @param {string} imgPath - path to image file to be displayed on the card
  * @param {string} title - title of the card
  * @param {string} subtitle - subtitle to be displayed on the card
@@ -18,7 +18,7 @@ const CARD = {
  * @returns {Node} A preformatted `<div>` element that can be attached to the DOM
  */
 function bindToCard(
-    type,
+    layout,
     imgPath,
     title,
     subtitle,
@@ -26,52 +26,34 @@ function bindToCard(
     url,
     urlText = "More details"
 ) {
-    type = type || CARD.HORIZONTAL; // Default card layout is horizontal
-
-    var cardType;
-
-    switch (type) {
-        case CARD.HORIZONTAL:
-            cardType = "card-h";
-            break;
-        case CARD.VERTICAL:
-            cardType = "card-v";
-            break;
-        case CARD.SMALL:
-            cardType = "card-sm";
-            break;
-    }
+    layout = layout || CARD.HORIZONTAL; // Default card layout is horizontal
 
     var clone = document
-        .querySelector(`#templates .card.${cardType}.template`)
+        .querySelector(`#templates .card.${layout}.template`)
         .cloneNode(true);
 
     if (imgPath) {
         var img = document.createElement("img");
         img.src = imgPath;
-        clone.querySelector(`.${cardType}-img`).appendChild(img);
+        clone.querySelector(`.${layout}-img`).appendChild(img);
     }
 
     if (title) {
-        clone.querySelector(
-            `.${cardType}-content .${cardType}-title`
-        ).textContent = title;
+        clone.querySelector(`.${layout}-content .${layout}-title`).textContent =
+            title;
     }
 
     if (subtitle) {
-        clone.querySelector(
-            `.${cardType}-content .${cardType}-subtitle`
-        ).textContent = subtitle;
+        clone.querySelector(`.${layout}-content .${layout}-subtitle`).textContent =
+            subtitle;
     }
 
     if (description) {
         clone.querySelector(
-            `.${cardType}-content .${cardType}-description`
+            `.${layout}-content .${layout}-description`
         ).textContent = description;
     } else {
-        clone
-            .querySelector(`.${cardType}-content .${cardType}-description`)
-            ?.remove();
+        clone.querySelector(`.${layout}-content .${layout}-description`)?.remove();
     }
 
     if (url) {
@@ -80,7 +62,7 @@ function bindToCard(
         link.href = url;
         link.textContent = urlText;
 
-        clone.querySelector(`.${cardType}-content`).appendChild(link);
+        clone.querySelector(`.${layout}-content`).appendChild(link);
     }
 
     clone.classList.remove("template");
