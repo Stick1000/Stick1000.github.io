@@ -39,6 +39,7 @@ function bindToCard(
     if (imgPath) {
         var img = document.createElement("img");
         img.src = imgPath;
+        img.alt = title || "No description provided.";
         clone.querySelector(`.${layout}-img`).appendChild(img);
     }
 
