@@ -89,7 +89,13 @@ modal
     .querySelector(".modal-header .modal-close")
     .addEventListener("click", () => (modal.hidden = true));
 
-modal.addEventListener("click", () => (modal.hidden = true));
+modal.addEventListener("click", function (e) {
+    if (e.target !== modal) {
+        return;
+    } else {
+        modal.hidden = true;
+    }
+});
 
 /**
  * @param {Node} element - element that triggers the modal
@@ -97,16 +103,19 @@ modal.addEventListener("click", () => (modal.hidden = true));
  * @param {string} subtitle
  * @param {string} description
  */
-
 function bindToModal(element, title, subtitle, description) {
     if (!element) return false;
 
     element.addEventListener("click", function (e) {
-        modal.querySelector(".modal-header .modal-title").textContent =
+        if (e.target === element.querySelector("a")) {
+            return;
+        }
+
+        modal.querySelector(".modal-title").textContent =
             title || "No title";
-        modal.querySelector(".modal-content .modal-subtitle").textContent =
+        modal.querySelector(".modal-subtitle").textContent =
             subtitle || "N/A";
-        modal.querySelector(".modal-content .modal-description").textContent =
+        modal.querySelector(".modal-description").textContent =
             description || "No description";
         modal.hidden = false;
     });
@@ -183,7 +192,7 @@ function bindData() {
                 e.description,
                 true,
                 e.url,
-                "Project link"
+                e.urlText || "Project link"
             );
             _projectsDone.append(card);
         });
@@ -200,11 +209,11 @@ var about_btn = document.getElementById("about-btn");
 var return_btn = document.getElementById("return-btn");
 
 about_btn.addEventListener("click", function (e) {
-    document.querySelectorAll("body > div").forEach(function (e) {
-        if (e.id === "about") {
-            e.removeAttribute("hidden");
+    document.querySelectorAll("body > div").forEach(function (element) {
+        if (element.id === "about") {
+            element.removeAttribute("hidden");
         } else {
-            e.setAttribute("hidden", null);
+            element.setAttribute("hidden", null);
         }
     });
 
