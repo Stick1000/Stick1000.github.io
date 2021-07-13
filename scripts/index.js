@@ -14,6 +14,7 @@ const CARD = {
  * @param {string} title - title of the card
  * @param {string} subtitle - subtitle to be displayed on the card
  * @param {string} description
+ * @param {boolean} showDescription - whether to show description on the card itself
  * @param {string} url - URL pointing to external resources
  * @param {string} urlText - text to display instead of the URL
  * @returns {Node} A preformatted `<div>` element that can be attached to the DOM
@@ -75,6 +76,7 @@ function bindToCard(
 
     if (includeModal) {
         bindToModal(clone, title, subtitle, description);
+        clone.classList.add("clickable", null);
     }
 
     return clone;
@@ -85,9 +87,9 @@ function bindToCard(
  */
 var modal = document.getElementById("modal");
 
-modal
-    .querySelector(".modal-header .modal-close")
-    .addEventListener("click", () => (modal.hidden = true));
+var modalClose = modal.querySelector(".modal-header .modal-close");
+modalClose.classList.add("clickable");
+modalClose.addEventListener("click", () => (modal.hidden = true));
 
 modal.addEventListener("click", function (e) {
     if (e.target !== modal) {
