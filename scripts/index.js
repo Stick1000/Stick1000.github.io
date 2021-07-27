@@ -19,7 +19,7 @@ const CARD = {
  * @param {string} urlText - text to display instead of the URL
  * @returns {Node} A preformatted `<div>` element that can be attached to the DOM
  */
-function bindToCard(
+const bindToCard = (
     layout,
     includeModal,
     imgPath,
@@ -29,15 +29,15 @@ function bindToCard(
     showDescription,
     url,
     urlText = "More details"
-) {
+) => {
     layout = layout || CARD.HORIZONTAL; // Default card layout is horizontal
 
-    var clone = document
+    const clone = document
         .querySelector(`#templates .card.${layout}.template`)
         .cloneNode(true);
 
     if (imgPath) {
-        var img = document.createElement("img");
+        const img = document.createElement("img");
         img.src = imgPath;
         img.alt = title || "No description provided.";
         clone.querySelector(`.${layout}-img`).appendChild(img);
@@ -65,7 +65,7 @@ function bindToCard(
     }
 
     if (url) {
-        var link = document.createElement("a");
+        const link = document.createElement("a");
 
         link.href = url;
         link.textContent = urlText;
@@ -81,14 +81,14 @@ function bindToCard(
     }
 
     return clone;
-}
+};
 
 /**
  * Modal
  */
-var modal = document.getElementById("modal");
+const modal = document.getElementById("modal");
 
-var modalClose = modal.querySelector(".modal-header .modal-close");
+const modalClose = modal.querySelector(".modal-header .modal-close");
 modalClose.classList.add("clickable");
 modalClose.addEventListener("click", () => (modal.hidden = true));
 
@@ -106,7 +106,7 @@ modal.addEventListener("click", function (e) {
  * @param {string} subtitle
  * @param {string} description
  */
-function bindToModal(element, title, subtitle, description) {
+const bindToModal = (element, title, subtitle, description) => {
     if (!element) return false;
 
     element.addEventListener("click", function (e) {
@@ -114,20 +114,18 @@ function bindToModal(element, title, subtitle, description) {
             return;
         }
 
-        modal.querySelector(".modal-title").textContent =
-            title || "No title";
-        modal.querySelector(".modal-subtitle").textContent =
-            subtitle || "N/A";
+        modal.querySelector(".modal-title").textContent = title || "No title";
+        modal.querySelector(".modal-subtitle").textContent = subtitle || "N/A";
         modal.querySelector(".modal-description").textContent =
             description || "No description";
         modal.hidden = false;
     });
-}
+};
 
 /**
  * Binds the data to each subsection
  */
-function bindData() {
+const bindData = () => {
     const _education = document.querySelector("#education .section-content");
     const _skills = document.querySelector("#skills .section-content");
     const _technologies = document.querySelector(
@@ -142,8 +140,8 @@ function bindData() {
     if (education.length) {
         _education.querySelector(".nodata").remove();
 
-        education.forEach(function (e) {
-            var card = bindToCard(
+        education.forEach((e) => {
+            const card = bindToCard(
                 CARD.HORIZONTAL,
                 true,
                 e.img_path || PLACEHOLDER_IMAGE.EDUCATION,
@@ -161,8 +159,8 @@ function bindData() {
     if (skills.length) {
         _skills.querySelector(".nodata").remove();
 
-        skills.forEach(function (e) {
-            var card = bindToCard(CARD.SMALL, false, e.img_path, e.name);
+        skills.forEach((e) => {
+            const card = bindToCard(CARD.SMALL, false, e.img_path, e.name);
             _skills.append(card);
         });
     }
@@ -170,8 +168,8 @@ function bindData() {
     if (technologies.length) {
         _technologies.querySelector(".nodata").remove();
 
-        technologies.forEach(function (e) {
-            var card = bindToCard(
+        technologies.forEach((e) => {
+            const card = bindToCard(
                 CARD.HORIZONTAL,
                 false,
                 e.img_path || PLACEHOLDER_IMAGE.TECHNOLOGIES,
@@ -185,8 +183,8 @@ function bindData() {
     if (projectsDone.length) {
         _projectsDone.querySelector(".nodata").remove();
 
-        projectsDone.forEach(function (e) {
-            var card = bindToCard(
+        projectsDone.forEach((e) => {
+            const card = bindToCard(
                 CARD.VERTICAL,
                 true,
                 e.img_path,
@@ -202,17 +200,17 @@ function bindData() {
     }
 
     document.querySelector("#templates").remove();
-}
+};
 
 bindData();
 
 // Handles button clicks on header navigation
-var details_btn = document.getElementById("details-btn");
-var about_btn = document.getElementById("about-btn");
-var return_btn = document.getElementById("return-btn");
+const details_btn = document.getElementById("details-btn");
+const about_btn = document.getElementById("about-btn");
+const return_btn = document.getElementById("return-btn");
 
-about_btn.addEventListener("click", function (e) {
-    document.querySelectorAll("body > div").forEach(function (element) {
+about_btn.addEventListener("click", (e) => {
+    document.querySelectorAll("body > div").forEach((element) => {
         if (element.id === "about") {
             element.removeAttribute("hidden");
         } else {
