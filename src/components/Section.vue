@@ -42,8 +42,8 @@
 </template>
 
 <script>
-import Card from "./Card";
-import Link from "./Link";
+import Card from "./Card.vue";
+import Link from "./Link.vue";
 
 export default {
   name: "Section",

@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Section from "./Section";
+import Section from "./Section.vue";
 import Data from "../db";
 
 export default {

@@ -13,10 +13,10 @@
 </template>
 
 <script>
-import Header from "./components/Header";
-import Modal from "./components/Modal";
-import Details from "./components/Details";
-import About from "./components/About";
+import Header from "./components/Header.vue";
+import Modal from "./components/Modal.vue";
+import Details from "./components/Details.vue";
+import About from "./components/About.vue";
 
 export default {
   name: "app",
