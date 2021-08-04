@@ -18,8 +18,6 @@
 </template>
 
 <script>
-import Modal from "./Modal";
-
 export default {
   name: "Card",
   props: {
@@ -38,9 +36,6 @@ export default {
     },
     url: String,
     urlText: String
-  },
-  components: {
-    Modal
   },
   methods: {
     launchModal(e) {
