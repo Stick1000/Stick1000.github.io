@@ -1,3 +1,9 @@
+<script>
+export default {
+  name: "Header"
+};
+</script>
+
 <template>
   <header id="header">
     <div class="header-img">
@@ -6,25 +12,11 @@
     <div class="header-content">
       <h1>Janley Molina</h1>
       <p>Software Developer Intern at ItemHound Corporation</p>
-      <a @click="showDetails" id="details-btn" href="#details">View details</a>
-      <a @click="showAbout" id="about-btn" href="#about">More</a>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/about">About</RouterLink>
     </div>
   </header>
 </template>
-
-<script>
-export default {
-  name: "Header",
-  methods: {
-    showAbout() {
-      this.$emit("showabout");
-    },
-    showDetails() {
-      this.$emit("showdetails");
-    }
-  }
-};
-</script>
 
 <style scoped>
 #header {

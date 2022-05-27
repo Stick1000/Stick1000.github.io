@@ -1,3 +1,14 @@
+<script>
+export default {
+  name: "Link",
+  props: {
+    title: String,
+    url: String,
+    imgPath: String
+  }
+};
+</script>
+
 <template>
   <a :href="url">
     <div :class="['link', url ? 'clickable' : '']">
@@ -10,17 +21,6 @@
     </div>
   </a>
 </template>
-
-<script>
-export default {
-  name: "Link",
-  props: {
-    title: String,
-    url: String,
-    imgPath: String
-  }
-};
-</script>
 
 <style scoped>
 .clickable {

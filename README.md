@@ -1,22 +1,35 @@
-# Project taken and modified from [this gitlab template](https://github.com/vuejs-templates/webpack-simple)
+# janleymolina
 
-## webpack-simple
+This template should help get you started developing with Vue 3 in Vite.
 
-> A Vue.js project
+## Recommended IDE Setup
 
-### Build Setup
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
 
-``` bash
-# install dependencies
+## Customize configuration
+
+See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+## Project Setup
+
+```sh
 npm install
+```
 
-# serve with hot reload at localhost:8080
+### Compile and Hot-Reload for Development
+
+```sh
 npm run dev
+```
 
-# build for production with minification
+### Compile and Minify for Production
+
+```sh
 npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### Lint with [ESLint](https://eslint.org/)
 
-The difference lies within the `/src/App.vue` and `/src/components/Sample.vue` files.
+```sh
+npm run lint
+```

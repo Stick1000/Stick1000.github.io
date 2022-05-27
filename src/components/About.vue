@@ -1,15 +1,3 @@
-<template>
-  <div id="about">
-    <Section title="About me" :content="bio" />
-    <Section
-      title="Contact me"
-      :columns="3"
-      :content="links"
-      contentType="links"
-    />
-  </div>
-</template>
-
 <script>
 import Section from "./Section.vue";
 import Data from "../db";
@@ -27,6 +15,18 @@ export default {
   }
 };
 </script>
+
+<template>
+  <div id="about">
+    <Section title="About me" :content="bio" />
+    <Section
+      title="Contact me"
+      :columns="3"
+      :content="links"
+      contentType="links"
+    />
+  </div>
+</template>
 
 <style>
 #about {

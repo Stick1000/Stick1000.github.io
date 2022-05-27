@@ -1,7 +1,11 @@
-import Vue from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
 
-new Vue({
-  el: '#app',
-  render: h => h(App)
-})
+import mitt from "mitt";
+
+const app = createApp(App);
+
+app.use(router);
+app.config.globalProperties.emitter = mitt();
+app.mount("#app");

@@ -1,22 +1,3 @@
-<template>
-  <div
-    @click="launchModal"
-    :class="['card', layout, includeModal ? 'clickable' : '']"
-  >
-    <div v-if="imgPath" :class="`${layout}-img`">
-      <img :src="imgPath" :alt="title" />
-    </div>
-    <div :class="`${layout}-content`">
-      <p :class="`${layout}-title`">{{ title }}</p>
-      <p :class="`${layout}-subtitle`">{{ subtitle }}</p>
-      <p v-if="showDescription" :class="`${layout}-description`">
-        {{ description }}
-      </p>
-      <a v-if="url && urlText" :href="url">{{ urlText }}</a>
-    </div>
-  </div>
-</template>
-
 <script>
 export default {
   name: "Card",
@@ -40,7 +21,7 @@ export default {
   methods: {
     launchModal(e) {
       if (this.includeModal && e.target.tagName !== "A") {
-        this.$root.$emit("modal-open", {
+        this.emitter.emit("modal-open", {
           title: this.title,
           subtitle: this.subtitle,
           description: this.description
@@ -50,6 +31,25 @@ export default {
   }
 };
 </script>
+
+<template>
+  <div
+    @click="launchModal"
+    :class="['card', layout, includeModal ? 'clickable' : '']"
+  >
+    <div v-if="imgPath" :class="`${layout}-img`">
+      <img :src="imgPath" :alt="title" />
+    </div>
+    <div :class="`${layout}-content`">
+      <p :class="`${layout}-title`">{{ title }}</p>
+      <p :class="`${layout}-subtitle`">{{ subtitle }}</p>
+      <p v-if="showDescription" :class="`${layout}-description`">
+        {{ description }}
+      </p>
+      <a v-if="url && urlText" :href="url">{{ urlText }}</a>
+    </div>
+  </div>
+</template>
 
 <style scoped>
 .clickable {

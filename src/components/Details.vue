@@ -1,12 +1,3 @@
-<template>
-  <div id="details">
-    <Section title="Education" :columns="2" :content="education" />
-    <Section title="Skills" :columns="4" :content="skills" />
-    <Section title="Technologies" :columns="3" :content="technologies" />
-    <Section title="Projects" :columns="2" :content="projects" />
-  </div>
-</template>
-
 <script>
 import Section from "./Section.vue";
 import Data from "../db";
@@ -26,6 +17,15 @@ export default {
   }
 };
 </script>
+
+<template>
+  <div id="details">
+    <Section title="Education" :columns="2" :content="education" />
+    <Section title="Skills" :columns="4" :content="skills" />
+    <Section title="Technologies" :columns="3" :content="technologies" />
+    <Section title="Projects" :columns="2" :content="projects" />
+  </div>
+</template>
 
 <style>
 #details {

@@ -1,3 +1,30 @@
+<script>
+export default {
+  name: "Modal",
+  data() {
+    return {
+      title: "",
+      subtitle: "",
+      description: "",
+      showModal: false
+    };
+  },
+  mounted: function() {
+    this.emitter.on("modal-open", e => {
+      this.populateModal(e);
+    });
+  },
+  methods: {
+    populateModal(e) {
+      this.title = e.title;
+      this.subtitle = e.subtitle;
+      this.description = e.description;
+      this.showModal = true;
+    }
+  }
+};
+</script>
+
 <template>
   <div id="modal" @click.self="showModal = false" v-show="showModal">
     <div class="modal-box">
@@ -26,31 +53,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  name: "Modal",
-  data() {
-    return {
-      title: "",
-      subtitle: "",
-      description: "",
-      showModal: false
-    };
-  },
-  mounted: function() {
-    this.$root.$on("modal-open", this.populateModal);
-  },
-  methods: {
-    populateModal(e) {
-      this.title = e.title;
-      this.subtitle = e.subtitle;
-      this.description = e.description;
-      this.showModal = true;
-    }
-  }
-};
-</script>
 
 <style scoped>
 .clickable {
