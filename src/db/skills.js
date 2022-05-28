@@ -1,12 +1,19 @@
 const skills = [
-  {
-    name: "Software Development",
-    img_path: "./src/assets/skills/undraw_programming.svg"
-  },
-  {
-    name: "Web Development",
-    img_path: "./src/assets/skills/undraw_Code_typing.svg"
-  }
+    {
+        name: "Software Development",
+    },
+    {
+        name: "Web Development",
+    },
+    {
+        name: "Mobile Development",
+    },
+    {
+        name: "Problem Solving",
+    },
+    {
+        name: "Team Leadership",
+    },
 ];
 
 export default skills;
