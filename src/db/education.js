@@ -27,7 +27,7 @@ const education = [
         year_end: 2018,
         description: `• With High Honors
         • Awards in Innovation`,
-        img_path: "./src/assets/logos/rshs6.png",
+        img_path: "/logos/rshs6.png",
     },
     {
         name: "Regional Science High School for Region VI",
@@ -36,7 +36,7 @@ const education = [
         year_end: 2016,
         description: `• Part of Western Visayas delegate to the 2016 National Science and Technology Fair
             • Founded, along with four co-founders, the RSHS-VI Robotics Club, the first dedicated robotics club in Western Visayas`,
-        img_path: "./src/assets/logos/rshs6.png",
+        img_path: "/logos/rshs6.png",
     },
     {
         name: "Aklan Catholic College",
@@ -44,7 +44,7 @@ const education = [
         year_start: 2003,
         year_end: 2012,
         description: "• Class Valedictorian",
-        img_path: "./src/assets/logos/acc.png",
+        img_path: "/logos/acc.png",
     },
 ];
 

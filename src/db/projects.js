@@ -26,7 +26,7 @@ const projects = [
       • Created a noSQL database using MongoDB, complete with mock data.
       • Designed and developed the RESTful API endpoints communicating with the blockchain and MongoDB database through the use of Node and Express.js. 
       • Integrated API endpoints to the frontend application created in Vue.js.`,
-        img_path: "./src/assets/projects/vacchain.png",
+        img_path: "/projects/vacchain.png",
     },
     {
         name: "SitMate",
@@ -40,7 +40,7 @@ const projects = [
         • Prioritized features according to time constraints, maintaining contact with the client throughout the whole process.
         • Designed the CRUD and helper API endpoints using Dart that communicates to a local database.
         • Implemented certain key aspects of the user interface using Flutter.`,
-        img_path: "./src/assets/projects/sitmate.gif",
+        img_path: "/projects/sitmate.gif",
         url: "https://github.com/NamelessOrganization/SitMate",
     },
     {
@@ -76,7 +76,7 @@ const projects = [
         date_completed: "2018",
         description:
             "A pretty fun role-playing game (RPG) made with RPG Maker MV.",
-        img_path: "./src/assets/projects/yesterday_dream.png",
+        img_path: "/projects/yesterday_dream.png",
         url: "https://1drv.ms/u/s!AvN4LNS2ng4d_CscSppj7tJl82W3?e=P07dGQ",
         url_text: "Download",
     },

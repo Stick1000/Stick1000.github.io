@@ -7,7 +7,7 @@ export default {
 <template>
     <header id="header">
         <div class="header-img">
-            <img src="../assets/profile.png" alt="profile_pic" />
+            <img src="/profile.png" alt="profile_pic" />
         </div>
         <div class="header-content">
             <h1>Janley Molina</h1>
@@ -24,7 +24,7 @@ export default {
             rgba(170, 130, 0, 0.05),
             rgba(0, 0, 0, 0.95)
         ),
-        url("../assets/bg.png");
+        url("/bg.png");
     background-size: cover;
     height: 100%;
     text-align: center;

@@ -5,17 +5,17 @@ const links = [
     {
         title: "GitHub",
         url: "https://github.com/Stick1000/",
-        imgPath: "./src/assets/logos/github.svg",
+        imgPath: "/logos/github.svg",
     },
     {
         title: "LinkedIn",
         url: "https://www.linkedin.com/in/janley-molina",
-        imgPath: "./src/assets/logos/linkedin.svg",
+        imgPath: "/logos/linkedin.svg",
     },
     {
         title: "Email",
         url: "mailto:janleymolina@outlook.com",
-        imgPath: "./src/assets/logos/envelope.svg",
+        imgPath: "/logos/envelope.svg",
     },
 ];
 

@@ -1,3 +1,25 @@
+<script>
+import Card from "./Card.vue";
+import Link from "./Link.vue";
+
+export default {
+    name: "Section",
+    components: {
+        Card,
+        Link,
+    },
+    props: {
+        title: String,
+        columns: Number,
+        content: [Array, String],
+        contentType: {
+            type: String,
+            default: "cards",
+        },
+    },
+};
+</script>
+
 <template>
     <div class="section">
         <h2 class="section-heading">{{ title }}</h2>
@@ -40,28 +62,6 @@
         </div>
     </div>
 </template>
-
-<script>
-import Card from "./Card.vue";
-import Link from "./Link.vue";
-
-export default {
-    name: "Section",
-    components: {
-        Card,
-        Link,
-    },
-    props: {
-        title: String,
-        columns: Number,
-        content: [Array, String],
-        contentType: {
-            type: String,
-            default: "cards",
-        },
-    },
-};
-</script>
 
 <style scoped>
 .nodata {

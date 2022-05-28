@@ -21,9 +21,6 @@ export default {
     methods: {
         launchModal(e) {
             if (this.includeModal && e.target.tagName !== "A") {
-                console.log(
-                    this.layout === "card-h" || "card-sm" ? "" : this.imgPath
-                );
                 this.emitter.emit("modal-open", {
                     imgPath: this.layout === "card-v" ? this.imgPath : "",
                     title: this.title,
