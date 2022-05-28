@@ -5,17 +5,17 @@ import Modal from "./components/Modal.vue";
 </script>
 
 <template>
-  <div>
-    <Header />
-    <Modal />
+    <div>
+        <Header />
+        <Modal />
 
-    <RouterView />
-  </div>
+        <RouterView />
+    </div>
 </template>
 
 <style>
 body {
-  background-color: #e6e6e6;
-  margin: 0;
+    background-color: #e6e6e6;
+    margin: 0;
 }
 </style>
