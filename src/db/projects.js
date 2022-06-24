@@ -27,6 +27,7 @@ const projects = [
       • Designed and developed the RESTful API endpoints communicating with the blockchain and MongoDB database through the use of Node and Express.js. 
       • Integrated API endpoints to the frontend application created in Vue.js.`,
         img_path: "/projects/vacchain.png",
+        url: "https://github.com/HakushinImpact/"
     },
     {
         name: "SitMate",
